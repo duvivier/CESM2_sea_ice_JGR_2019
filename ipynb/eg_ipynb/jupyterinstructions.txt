@@ -1,0 +1,137 @@
+Model Hierarchies Activity 
+
+In this activity, we will compare the sea ice and surface temperature output from 4 different model configurations: fully-coupled (B-compset), atmosphere-land-seaice coupled to slab ocean model (E-compset), atmosphere-land-seaice with prescribed SST boundary conditions (F-compset), and ocean-seaice with prescribed atmospheric boundary conditions (G-compset). 
+
+We will compare these 4 simulations in a set of activities in Jupyter Notebooks:
+1.	Comparison of Arctic sea ice extent time series and seasonal cycle
+2.	Comparison of Arctic sea ice thickness in the fully coupled and slab ocean model (SOM) simulations
+
+Instructions for logging into Cheyenne and preparing a directory for these activities
+
+1.	Log in to Cheyenne:
+ssh -Y USERNAME@cheyenne.ucar.edu
+
+2.	In your home directory, make a new directory for these activities:
+mkdir PWS2018/day3/morning
+
+3.	Move to this directory and copy these files from Elizabeth's directory to yours:
+cd ~/PWS2018/day3/morning
+cp /glade/u/home/emaroon/PWS2018/day3/morning/*  . 
+
+Instructions for opening up the notebook
+
+4.	Start an interactive session on a single processor of a cheyenne compute node with our reserved queue for the tutorial:
+
+qsub -I -l select=1:ncpus=1 -l walltime=06:00:00 -q share -A P93300665
+
+5.	Load python packages:
+module load python/3.6.4
+ncar_pylib
+
+To see what packages are available, try typing: 
+ncar_pylib -p
+
+6.	Start the jupyter notebook server:
+jupyter notebook --no-browser --ip=`hostname`
+
+Note that it is important to get the right apostrophe here ( ` is correct, not ' and not ").
+
+7.	Pay attention to the last line that comes up in the shell. It will look something like this:
+
+https://r1i2n3:8888/?token=abdfijasifoaefoijefoabcd
+
+Note which cheyenne node you are on (something like rXiXnX) and what port you have (the 4-digit number starting in 88XX, most likely will be 8888, 8889, or 8890).  Note also that there is a token listed identically twice.  
+
+Write down YOURNODE and YOURPORT for later.  Find the token.
+
+8.	Open a new X11/shell terminal on your local machine and port-forward by typing the below command all in one line. Note that the second flag is a lower-case L (not the number one) and fill in for YOURNODE and YOURPORT:
+
+ssh -N -l USERNAME -L 8889:rXiXnX:YOURPORT cheyenne.ucar.edu
+
+For example:
+ssh -N -l emaroon -L 8889:r1i2n3:8888 cheyenne.ucar.edu
+
+If you are asked: "Are you sure you want to continue connecting?", Type yes. 
+Enter your pin and token.
+This shell will hang if you were successful.
+
+If you have issues with "correct host key," call Elizabeth over. 
+
+9.	Open a chrome (or other internet browser) tab.
+Type this URL:
+localhost:8889
+
+A screen will come up asking for a "token." Go back to the first shell where you started the jupyter notebook server. Again find that last line where it says something like:
+https://YOURNODE:YOURPORT/?token=[token]
+
+For example: 
+
+https://r1i2n3:8888/?token=abdfijasifoaefoijefoabcd
+
+Copy the the token (which is a long string) from the end of this line (after the second iteration of the word "token"). Do not include the word token, the equals sign, or the &/?. Paste it into the top box on the chrome tab where it asks for the token. Click log-in.
+
+10.	A graphical representation of your Cheyenne directory structure should appear with the jupyter notebooks present (end in ".ipynb"). Click on the "activity1" notebook to open it up.  There are also static html versions of both notebooks so that you have original code to refer back to in case you mess something up and can't fix it.
+
+11.	To execute a jupyter notebook cell, click on a cell with code and type SHIFT+ENTER
+
+
+
+
+
+APPENDIX
+How to open an interactive session and port-forward on geyser/cheyenne or on a cheyenne compute node
+
+1.	Start the interactive session on cheyenne or geyser:
+
+For a single cheyenne compute node:
+qsub -I -l select=1:ncpus=1 -l walltime=04:00:00 -q share -A UCUB0067
+
+For a dav (geyser/caldera) node:
+execdav -m 10GB $SHELL
+
+2.	Load python modules and start the notebook:
+module load python/3.6.4
+ncar_pylib
+jupyter notebook --no-browser --ip=`hostname`
+
+Pay attention to the last line that comes up in the shell. It will look something like this:
+
+https://geyser13:8888/?token=abdfijasifoaefoijefoabcd&token=abdfijasifoaefoijefoabcd
+
+Note what cheyenne, geyser, or caldera node you are on (something like rXiXnXX or geyserXX or calderaXX or pronghornXX) and what port you have (the 4-digit number starting in 88XX, most likely will be 8888, 8889, or 8890).  Note also that there is a token listed identically twice.  
+
+3.	Port forward to your local machine:
+
+Open a new X11/shell terminal on your local machine and port-forward by typing the below command all in one line. Note that the second flag is a lower-case L (not the number one) and fill in for YOURNODE and YOURPORT:
+
+If using a cheyenne compute node:
+ssh -N -l USERNAME -L 8889:rXiXnX:YOURPORT    cheyenne.ucar.edu
+
+If using a dav session:
+ssh -N -l USERNAME -L 8889:YOURNODE:YOURPORT    YOURNODE.ucar.edu
+
+For example:
+ssh -N -l emaroon -L 8889:geyser13:8888 geyser13.ucar.edu
+
+If you are asked: "Are you sure you want to continue connecting?", Type yes. 
+Enter your pin and token.
+This shell will hang if you were successful.
+
+
+
+
+4.	Open up the port in an internet browser on your local machine:
+Open a chrome (or other internet browser) tab.
+Type this URL:
+localhost:8889
+
+A screen will come up asking for a "token." Go back to the first shell where you started the jupyter notebook server. Find that last line where it says something like:
+https://YOURNODE:YOURPORT/?token=[token]&token=[token]
+
+For example: 
+
+https://geyser13:8888/?token=abdfijasifoaefoijefoabcd&token=abdfijasifoaefoijefoabcd
+
+Copy the second iteration of the token (which is a long string) from the end of this line (after the second iteration of the word "token"). Do not include the word token, the equals sign, or the &. Paste it into the top box on the chrome tab where it asks for the token. Click log-in.
+
+
