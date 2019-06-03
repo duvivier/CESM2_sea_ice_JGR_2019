@@ -1,0 +1,27 @@
+ Copyright (C) 1995-2017 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.5.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+(0)	Loading CESM grid data
+(0)	Loading CESM data, Calculate hemispheric means at the same time
+(0)	Loading b expt PI control
+(0)	Loading bw expt PI control
+(0)	Global annual mean sfc temp over entire PI control runs
+(0)	CAM: 278.236 K
+(0)	WACCM: 278.124 K
+(0)	Global annual stddev sfc temp over entire PI control runs
+(0)	CAM: 1.63355 K
+(0)	WACCM: 1.67167 K
+(0)	NH annual mean sfc temp over entire PI control runs
+(0)	CAM: 257.502 K
+(0)	WACCM: 257.252 K
+(0)	NH annual stddev sfc temp over entire PI control runs
+(0)	CAM: 11.6953 K
+(0)	WACCM: 11.9606 K
+(0)	SH annual mean sfc temp over entire PI control runs
+(0)	CAM: 252.551 K
+(0)	WACCM: 252.359 K
+(0)	SH annual stddev sfc temp over entire PI control runs
+(0)	CAM: 6.51267 K
+(0)	WACCM: 6.53171 K

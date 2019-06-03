@@ -1,0 +1,51 @@
+Plotting cloud term CCN3 for hemisphere NH
+ Copyright (C) 1995-2017 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.4.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+(0)	Establishing data paths
+(0)	Loading CESM grid data
+(0)	Loading CESM data
+(0)	Loading b expt PI control
+(0)	Loading bw expt PI control
+(0)	Getting monthly averages
+(0)	Plotting CCN3
+(0)	Plotting CCN3
+(0)	Paneling
+(0)	converting to png
+(0)	Done with all plots. Hooray!
+Plotting cloud term num_a1 for hemisphere NH
+ Copyright (C) 1995-2017 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.4.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+(0)	Establishing data paths
+(0)	Loading CESM grid data
+(0)	Loading CESM data
+(0)	Loading b expt PI control
+(0)	Loading bw expt PI control
+(0)	Getting monthly averages
+(0)	Plotting num_a1
+(0)	Plotting num_a1
+(0)	Paneling
+(0)	converting to png
+(0)	Done with all plots. Hooray!
+Plotting cloud term num_a3 for hemisphere NH
+ Copyright (C) 1995-2017 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.4.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+(0)	Establishing data paths
+(0)	Loading CESM grid data
+(0)	Loading CESM data
+(0)	Loading b expt PI control
+(0)	Loading bw expt PI control
+(0)	Getting monthly averages
+(0)	Plotting num_a3
+(0)	Plotting num_a3
+(0)	Paneling
+(0)	converting to png
+(0)	Done with all plots. Hooray!

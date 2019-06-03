@@ -1,0 +1,13 @@
+
+Currently Loaded Modules:
+  1) ncarenv/1.2           5) netcdf/4.6.1   9) cdo/1.9.3
+  2) intel/17.0.1          6) ncl/6.5.0     10) idl/8.6
+  3) ncarcompilers/0.4.1   7) ncview/2.1.7  11) matlab/R2016b
+  4) openmpi/3.1.2         8) nco/4.7.4     12) python/3.6.8
+
+ 
+
+
+The following have been reloaded with a version change:
+  1) ncl/6.5.0 => ncl/6.4.0
+
